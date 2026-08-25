@@ -1,0 +1,27 @@
+package com.unboxlumen.ndebugbar.views;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.widget.LinearLayout;
+
+import androidx.annotation.Nullable;
+import androidx.core.view.NestedScrollingChild;
+
+public class MultiRvLayout extends LinearLayout implements NestedScrollingChild {
+    public MultiRvLayout(Context context) {
+        super(context);
+    }
+
+    public MultiRvLayout(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public MultiRvLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    public boolean isNestedScrollingEnabled() {
+        return true;
+    }
+}
+

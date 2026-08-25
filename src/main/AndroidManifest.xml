@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 悬浮窗权限：摇一摇唤出的功能菜单是 WindowManager 悬浮窗 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application>
+
+        <!-- Rubik: 继承 FileProvider，利用 ContentProvider 生命周期自动完成摇一摇调试功能初始化 -->
+        <provider
+            android:name="com.unboxlumen.ndebugbar.DebugBar"
+            android:authorities="${applicationId}.debugbar"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 调试功能分发页（网络日志/沙盒文件/Crash/日志） -->
+        <activity
+            android:name="com.unboxlumen.ndebugbar.ui.Dispatcher"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- UI 工具（视图层级检查）跳转页 -->
+        <activity
+            android:name="com.unboxlumen.ndebugbar.ui.TransActivity"
+            android:configChanges="orientation|screenLayout|screenSize|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>
+

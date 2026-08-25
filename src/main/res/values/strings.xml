@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pd_name_help">帮助</string>
+    <string name="pd_name_delete_key">删除键</string>
+    <string name="pd_name_database">数据库</string>
+    <string name="pd_name_sp">SP</string>
+    <string name="pd_name_file">文件</string>
+    <string name="pd_name_save">保存</string>
+    <string name="pd_name_open">打开</string>
+    <string name="pd_name_open_as_text">以文本打开</string>
+    <string name="pd_name_rename">重命名</string>
+    <string name="pd_name_copy_to_sdcard">复制到SD卡</string>
+    <string name="pd_name_copy_value">复制值</string>
+    <string name="pd_name_delete_row">删除行</string>
+    <string name="pd_name_delete_all">删除全部</string>
+    <string name="pd_name_search">搜索</string>
+    <string name="pd_name_info">信息</string>
+    <string name="pd_name_add">添加</string>
+    <string name="pd_name_edit">编辑</string>
+    <string name="pd_help_title">帮助标题</string>
+    <string name="pd_help_table">数据库表帮助</string>
+    <string name="pd_help_file">文件帮助</string>
+    <string name="pd_help_sp">SharedPreferences帮助</string>
+    <string name="pd_make_sure">确认</string>
+    <string name="pd_ok">确定</string>
+    <string name="pd_cancel">取消</string>
+    <string name="pd_success">成功</string>
+    <string name="pd_failed">失败</string>
+    <string name="pd_no_change">无变化</string>
+    <string name="pd_not_support">不支持</string>
+    <string name="pd_copy_hint">已复制到剪贴板</string>
+    <string name="pd_search_hint">输入搜索关键词</string>
+</resources>

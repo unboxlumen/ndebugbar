@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="pd_toolbar_id" type="id" />
+    <item name="pd_menu_id_1" type="id" />
+    <item name="pd_menu_id_2" type="id" />
+    <item name="item_net_status" type="id" />
+    <item name="view_name_wrapper" type="id" />
+    <item name="view_name_title" type="id" />
+    <item name="view_name_subtitle" type="id" />
+    <item name="gird_text" type="id" />
+    <item name="db_list_item_wrapper" type="id" />
+    <item name="pd_menu_id_3" type="id" />
+    <item name="pd_view_tag_for_unique" type="id" />
+    <item name="item_net_url" type="id" />
+    <item name="item_net_host" type="id" />
+    <item name="item_net_info" type="id" />
+    <item name="item_title_id" type="id" />
+    <item name="item_key" type="id" />
+    <item name="item_value" type="id" />
+    <item name="item_edit" type="id" />
+    <item name="item_arrow" type="id" />
+    <item name="item_prefix" type="id" />
+    <item name="text" type="id" />
+    <item name="common_item_title" type="id" />
+    <item name="common_item_arrow" type="id" />
+    <item name="common_item_info" type="id" />
+    <item name="item_option_btn" type="id" />
+    <item name="view_panel_hierarchy" type="id" />
+    <item name="view_panel_type" type="id" />
+    <item name="view_panel_clazz" type="id" />
+    <item name="view_panel_path" type="id" />
+    <item name="view_panel_id" type="id" />
+    <item name="view_panel_size" type="id" />
+    <item name="view_panel_parent" type="id" />
+    <item name="view_panel_current" type="id" />
+    <item name="view_panel_child" type="id" />
+</resources>

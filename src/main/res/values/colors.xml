@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pd_main_bg">#1A1A1A</color>
+    <color name="pd_toolbar_bg">#2A2A2A</color>
+    <color name="pd_label">#B0B0B0</color>
+    <color name="pd_label_dark">#666666</color>
+    <color name="pd_divider_light">#E0E0E0</color>
+    <color name="pd_item_key">#888888</color>
+    <color name="pd_item_focus">#4A90D9</color>
+    <color name="pd_blue">#2196F3</color>
+    <color name="pd_red">#FF5252</color>
+    <color name="viewfinder_laser">#FF0000</color>
+    <color name="viewfinder_border">#FFFFFF</color>
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

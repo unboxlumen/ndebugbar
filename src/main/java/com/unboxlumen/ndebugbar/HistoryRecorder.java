@@ -1,4 +1,4 @@
-package com.unboxlumen.ndebugbar.rubik;
+package com.unboxlumen.ndebugbar;
 
 import android.app.Activity;
 import android.app.Application;

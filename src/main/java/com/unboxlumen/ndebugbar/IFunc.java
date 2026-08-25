@@ -1,4 +1,4 @@
-package com.unboxlumen.ndebugbar.rubik;
+package com.unboxlumen.ndebugbar;
 
 import androidx.annotation.DrawableRes;
 

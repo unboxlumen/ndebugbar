@@ -1,4 +1,4 @@
-package com.unboxlumen.ndebugbar.rubik;
+package com.unboxlumen.ndebugbar;
 
 import android.animation.ValueAnimator;
 import android.app.Activity;

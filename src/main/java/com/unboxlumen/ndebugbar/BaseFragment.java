@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment;
 
 import com.unboxlumen.ndebugbar.mvp.IView;
 import com.unboxlumen.ndebugbar.network.loading.LoadingDelegate;
-import com.unboxlumen.ndebugbar.rubik.ui.connector.UIStateCallback;
+import com.unboxlumen.ndebugbar.ui.connector.UIStateCallback;
 import com.unboxlumen.ndebugbar.utils.KeyboardUtil;
 import com.unboxlumen.ndebugbar.utils.ViewUtils;
 import com.unboxlumen.ndebugbar.R.color;

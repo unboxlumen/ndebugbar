@@ -8,11 +8,11 @@
 > 内置日志镜像、网络检视、沙盒文件、SharedPreferences 编辑器、视图层级、
 > 崩溃日志与动画倍速。
 
-[![License](https://img.shields.io/github/license/unboxlumen/ndebugbar)](LICENSE)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
 - **Repository**: https://github.com/unboxlumen/ndebugbar
 - **Author**: UnboxLumen Project
-- **License**: Apache License 2.0 (see [LICENSE](LICENSE))
+- **License**: GNU General Public License v3.0 (GPL-3.0) (see [LICENSE](LICENSE))
 
 ---
 
@@ -86,6 +86,16 @@ debugImplementation project(':debugbar')
 
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE).
+GNU General Public License v3.0 — see [LICENSE](LICENSE).
+
+This is a strong copyleft license: any modified version that is
+distributed must also be released under GPL-3.0 (or later). Proprietary
+closed-source use, redistribution, or modification is not permitted.
+
+If you intend to integrate ndebugbar into a closed-source commercial
+product, this license is **not compatible** with that model. Consider
+contacting the maintainers for a commercial licensing arrangement, or
+fork the project under a different license only if you are the sole
+copyright holder.
 
 Copyright © 2026 UnboxLumen Project

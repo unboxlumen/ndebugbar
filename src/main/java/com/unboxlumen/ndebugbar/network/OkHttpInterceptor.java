@@ -3,9 +3,9 @@ package com.unboxlumen.ndebugbar.network;
 import android.text.TextUtils;
 
 import com.unboxlumen.ndebugbar.cache.Content;
+import com.unboxlumen.ndebugbar.cache.NetLogStore;
 import com.unboxlumen.ndebugbar.cache.Summary;
 import com.unboxlumen.ndebugbar.utils.Config;
-import com.unboxlumen.ndebugbar.utils.FileUtil;
 import com.unboxlumen.ndebugbar.utils.FormatUtil;
 import com.unboxlumen.ndebugbar.utils.Utils;
 
@@ -180,20 +180,6 @@ public class OkHttpInterceptor implements Interceptor {
         }
     }
 
-    private static byte[] responseBodyAsBytes(Response response) {
-        ResponseBody responseBody = response.body();
-        if (responseBody != null && HttpHeaders.hasBody(response)) {
-            try {
-                return sourceToBytesInternal(response.peekBody(Long.MAX_VALUE).source());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
-        } else {
-            return null;
-        }
-    }
-
     private static byte[] sourceToBytesInternal(Source source) {
         BufferedSource bufferedSource = Okio.buffer(source);
         byte[] result = null;
@@ -289,7 +275,11 @@ public class OkHttpInterceptor implements Interceptor {
 
         boolean canRecognize = this.checkContentEncoding(request.header("Content-Encoding"));
         if (canRecognize) {
-            content.requestBody = requestBodyAsStr(request);
+            String reqBody = requestBodyAsStr(request);
+            // 内存化：超过上限的正文不入内存（不能存就算了）
+            if (reqBody != null && reqBody.length() <= NetLogStore.MAX_BODY_LENGTH) {
+                content.requestBody = reqBody;
+            }
         }
 
         long id = Summary.insert(summary);
@@ -325,16 +315,7 @@ public class OkHttpInterceptor implements Interceptor {
         if (body != null) {
             MediaType type = body.contentType();
             if (type != null && type.toString().contains("image")) {
-                byte[] bytes = responseBodyAsBytes(response);
-                if (bytes != null) {
-                    String path = FileUtil.saveFile(bytes, response.request().url().toString(), (String) null);
-                    Content content = Content.query(reqId);
-                    if (content != null) {
-                        content.responseBody = path;
-                        Content.update(content);
-                    }
-                }
-
+                // 内存化：图片 body 不适合进内存，不再落盘保存（不能存就算了）
                 return;
             }
         }
@@ -345,7 +326,8 @@ public class OkHttpInterceptor implements Interceptor {
             if (!TextUtils.isEmpty(bodyStr)) {
                 Content content = Content.query(reqId);
                 if (content != null) {
-                    content.responseBody = bodyStr;
+                    // 内存化：超过上限的正文不入内存（不能存就算了）
+                    content.responseBody = bodyStr.length() <= NetLogStore.MAX_BODY_LENGTH ? bodyStr : null;
                     Content.update(content);
                 }
             }

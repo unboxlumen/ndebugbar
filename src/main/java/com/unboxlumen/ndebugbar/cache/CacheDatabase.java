@@ -25,8 +25,7 @@ class CacheDatabase extends SQLiteOpenHelper {
     private static final CacheDatabase INSTANCE;
 
     static {
-        tables.add(Summary.class);
-        tables.add(Content.class);
+        // 网络日志（Summary/Content）已改为纯内存存储（NetLogStore），不再建表
         tables.add(Crash.class);
         tables.add(History.class);
         INSTANCE = new CacheDatabase();
